@@ -1,0 +1,80 @@
+// AWS Manager — Estilos globais
+// Complementa o tema Quasar
+
+// Fontes
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+// Variáveis customizadas
+:root {
+  --aws-orange: #FF9900;
+  --aws-dark: #232F3E;
+  --aws-blue: #1565C0;
+  --border-radius-base: 8px;
+}
+
+// Body
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Modo escuro — seções de cabeçalho de cards
+.q-dark, body.body--dark {
+  .dark-section {
+    background: rgba(255,255,255,0.05) !important;
+  }
+}
+
+// Scrollbar customizada (webkit)
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.35);
+}
+
+// Cards com borda suave
+.q-card {
+  border-radius: var(--border-radius-base) !important;
+}
+
+// Tabelas com linhas hover
+.q-table tbody tr:hover {
+  background: rgba(21, 101, 192, 0.04);
+}
+
+// Chips menores sem padding excessivo
+.q-chip--dense {
+  font-size: 11px;
+}
+
+// Ellipsis utilitário
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Badge de status pulsante para instâncias running
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.status-running {
+  animation: pulse 2s infinite;
+}
+
+// Page padding padrão em mobile
+@media (max-width: 600px) {
+  .q-page {
+    padding: 8px !important;
+  }
+}
